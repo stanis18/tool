@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+  
+  <!-- 
+  		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/cenas3</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+   
+   -->
+     
+  		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="hibernate.connection.url">jdbc:mysql://localhost/cenas3</property>
+		<property name="hibernate.connection.username">cenas3</property>
+		<property name="hibernate.connection.password">cenas3</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  
+ 
+        
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">180</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.idle_test_period">90</property>
+        
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        
+        <mapping class="model.Avaliacao"/>
+        <mapping class="model.Comentario"/>
+        <mapping class="model.Disciplina"/>
+        <mapping class="model.Glossario"/>
+        <mapping class="model.MaterialGrafico"/>
+        <mapping class="model.MaterialPesquisado"/>
+        <mapping class="model.PalavraChave"/>
+        <mapping class="model.Periodo"/>
+        <mapping class="model.PlanoDesenvolvimento"/>
+        <mapping class="model.Problema"/>
+        <mapping class="model.ReferenciaBibliografica"/>
+        <mapping class="model.ReferenciaInicial"/>
+        <mapping class="model.Equipe"/>
+        <mapping class="model.Usuario"/>
+        <mapping class="model.Aluno"/>
+        <mapping class="model.Tutor"/>
+        <mapping class="model.Professor"/>
+        
+    </session-factory>
+</hibernate-configuration>

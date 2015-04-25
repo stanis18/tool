@@ -1,0 +1,17 @@
+## Última Atualização ##
+
+01/02/2010
+
+arquivos enviados:
+
+index.jsp
+esqueceuSenha.jsp
+index.css
+recupera.ok.jsp
+DaoUsuario.class
+EsqueceuSenha.class
+
+
+pastas criadas:
+
+esqueceusenha
