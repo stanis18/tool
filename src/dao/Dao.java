@@ -19,6 +19,14 @@ public class Dao<T> {
 	public void adiciona(T objeto) {
 		this.session.saveOrUpdate(objeto);
 	}
+	
+	public void merge(T objeto) {
+		this.session.merge(objeto);
+	}
+	
+	public void update(T objeto) {
+		this.session.update(objeto);
+	}
 
 	public void remover(T objeto){
 		this.session.delete(objeto);

@@ -15,9 +15,9 @@
    -->
      
   		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    	<property name="hibernate.connection.url">jdbc:mysql://localhost/cenas3</property>
-		<property name="hibernate.connection.username">cenas3</property>
-		<property name="hibernate.connection.password">cenas3</property>
+    	<property name="hibernate.connection.url">jdbc:mysql://localhost/cenas ii</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">xwl219???</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   
  

@@ -98,8 +98,8 @@ public class DaoFactory {
 		return new Dao<Comentario>(Comentario.class, this.session);
 	}
 	
-	public Dao<MaterialGrafico> getDaoMaterialGrafico() {
-		return new Dao<MaterialGrafico>(MaterialGrafico.class, this.session);
+	public DaoMaterialGrafico getDaoMaterialGrafico() {
+		return new DaoMaterialGrafico(this.session);
 	}
 
 	public Dao<Avaliacao> getDaoAvaliacao() {
@@ -110,7 +110,7 @@ public class DaoFactory {
 		return new Dao<PalavraChave>(PalavraChave.class, this.session);
 	}
 
-	// DAOs DE USUÁRIOS
+	// DAOs DE USUï¿½RIOS
 	
 	public DaoProfessor getDaoProfessor() {
 		return new DaoProfessor(this.session);

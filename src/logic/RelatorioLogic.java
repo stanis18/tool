@@ -474,23 +474,29 @@ public class RelatorioLogic {
 	@Validate(params="materialGrafico")
 	public void cadastrarMaterialGraficoProblema(
 			MaterialGrafico materialGrafico) throws IOException {
-		File fileUpload = this.fileInfo.getFile();
 		
+		if(this.fileInfo != null){
+			File fileUpload = this.fileInfo.getFile();
+			materialGrafico.setImagem(getBytesFromFile(fileUpload));
+			this.factory.beginTransaction();
+			this.factory.getDaoMaterialGrafico().adiciona(materialGrafico);
+			this.factory.commit();
+		}else {
+			this.factory.beginTransaction();
+			this.factory.getDaoMaterialGrafico().atualizaLegenda(materialGrafico.getIdMaterialGrafico(), materialGrafico.getLegenda());
+			this.factory.commit();
+		}
 		
-		materialGrafico.setImagem(getBytesFromFile(fileUpload));
-		
-		this.factory.beginTransaction();
-		this.factory.getDaoMaterialGrafico().adiciona(materialGrafico);
-		this.factory.commit();
 	}
 	
 	public void validateCadastrarMaterialGraficoProblema(ValidationErrors errors, MaterialGrafico materialGrafico){
-		File fileUpload = this.fileInfo.getFile();
-		long tamanhoArquivo  = fileUpload.length();
-		if(tamanhoArquivo > 500000){
-			errors.add(new FixedMessage("","O tamanho da imagem n„o pode ultrapassar 500KB", ""));
+		if(this.fileInfo != null){
+			File fileUpload = this.fileInfo.getFile();
+			long tamanhoArquivo  = fileUpload.length();
+			if(tamanhoArquivo > 500000){
+				errors.add(new FixedMessage("","O tamanho da imagem n√£o pode ultrapassar 500KB", ""));
+			}
 		}
-		
 	}
 	
 	@Viewless
@@ -659,5 +665,5 @@ public class RelatorioLogic {
         is.close();
         return bytes;
     }
-	
+
 }

@@ -58,7 +58,7 @@
 								<table class="dados">
 									<tr>
 										<td class="title">Data</td>
-										<td class="content1">${plano.dataPrevista}</td>
+										<td class="content1">${plano.dataPrevistaFormatada}</td>
 										<c:if test="${problema.aberto == 0}">
    											<td width="24" style='border-top:none;border-left:none;
                                                         border-bottom:solid #A2C8C8 1.0pt;border-right:none;'>
