@@ -1,5 +1,0 @@
-<vraptor>
-	<plugin>org.vraptor.plugin.hibernate.HibernateValidatorPlugin</plugin>
-	<converter>org.vraptor.converter.joda.LocalDateConverter</converter>
-    <converter>org.vraptor.converter.joda.LocalTimeConverter</converter>
-</vraptor>
